@@ -1,0 +1,32 @@
+.teams {
+  h2 {
+    width: max-content;
+    margin: 50px auto;
+    font-size: 70px;
+    font-weight: 400;
+    color: rgb(253, 93, 0);
+    font-family: "Fredoka One", cursive;
+  }
+  .teamsDiv {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 10px auto;
+    input {
+      margin-top: 10px;
+      font-size: 20px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+    }
+  }
+}
+.info {
+  width: 150px;
+  margin: 200px auto 0;
+  p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(253, 93, 0);
+  }
+}

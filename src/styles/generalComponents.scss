@@ -1,0 +1,33 @@
+.btn {
+  cursor: pointer;
+  display: block;
+  width: max-content;
+  margin: 150px auto 0;
+  border-radius: 20px;
+  background-color: rgb(253, 93, 0);
+  font-size: 40px;
+  padding: 10px 120px;
+}
+.but {
+  cursor: pointer;
+  display: block;
+  width: max-content;
+  margin: 10px auto;
+  border-radius: 20px;
+  background-color: rgb(253, 93, 0);
+  font-size: 20px;
+  padding: 5px 50px;
+}
+.container {
+  margin: 20px auto;
+  border: 1px solid black;
+  width: 600px;
+  height: 800px;
+  border-radius: 10px;
+  background: rgb(206, 152, 247);
+  background: linear-gradient(
+    0deg,
+    rgba(206, 152, 247, 1) 0%,
+    rgba(255, 138, 203, 1) 100%
+  );
+}
