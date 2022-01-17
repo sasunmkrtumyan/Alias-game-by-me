@@ -1,4 +1,10 @@
 .teams {
+  margin: 0 auto;
+  max-width: 250px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+
   h2 {
     width: max-content;
     margin: 50px auto;
@@ -19,6 +25,12 @@
       border-radius: 10px;
       border: none;
     }
+  }
+  .errors {
+    position: absolute;
+    bottom: -20px;
+    left: 35px;
+    color: red;
   }
 }
 .info {
