@@ -1,11 +1,51 @@
 .head {
-  display: flex;
-  justify-content: space-around;
+  position: relative;
   margin-top: 30px;
-  h1,
-  p {
+  h1 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
     color: rgb(253, 93, 0);
     font-family: "Fredoka One", cursive;
     font-size: 50px;
   }
+  p {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: rgb(253, 93, 0);
+    font-family: "Fredoka One", cursive;
+    font-size: 50px;
+  }
+}
+.wordsDiv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  width: 65%;
+  margin: 120px auto 20px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  background-color: white;
+  height: 600px;
+}
+.currentPoint {
+  max-width: 100px;
+  width: 100%;
+  margin: 10px auto;
+  font-size: 18px;
+  color: rgb(253, 93, 0);
+}
+.word {
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.answered {
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(192, 192, 192);
 }
