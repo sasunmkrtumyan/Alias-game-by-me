@@ -21,7 +21,7 @@ export default function Start() {
   const [page, setPage] = useState(0);
   const [currentPoints, setCurrentPoints] = useState(0);
   const [answeredWords, setAnsweredWords] = useState([]);
-  const [counter, setCounter] = useState(seconds - 20);
+  const [counter, setCounter] = useState(seconds);
   const [words, setWords] = useState([]);
 
   useEffect(() => {

@@ -11,7 +11,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   const handleValidate = () => {
-    if (points < 50 || seconds < 30) {
+    if (points < 30 || seconds < 30) {
       return;
     }
     navigate("/teams");
@@ -44,7 +44,7 @@ export default function Home() {
             min="50"
           />
         </div>
-        {(points < 50 || seconds < 30) && (
+        {(points < 30 || seconds < 30) && (
           <p className="error">Stop bebe ! ! !</p>
         )}
       </div>
