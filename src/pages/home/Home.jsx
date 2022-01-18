@@ -22,7 +22,7 @@ export default function Home() {
       <h1 className="name">Alias</h1>
       <div className="configuration">
         <div className="config">
-          <p>Round time</p>
+          <p className="confText">Round time</p>
           <input
             className="input"
             value={seconds}
@@ -34,7 +34,7 @@ export default function Home() {
           />
         </div>
         <div className="config">
-          <p>Point to win</p>
+          <p className="confText">Point to win</p>
           <input
             className="input"
             value={points}

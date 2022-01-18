@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import finishPhoto from "../../assets/images/finish.png";
 import scorePhoto from "../../assets/images/score.png";
 import "./score.scss";
@@ -25,6 +26,9 @@ export default function Score() {
         </div>
         <h3>{team2}</h3>
       </div>
+      <Link to="/start">
+        <button className="resbtn">Continue</button>
+      </Link>
     </div>
   );
 }

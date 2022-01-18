@@ -39,24 +39,18 @@ export const infoSlice = createSlice({
         state.currentTeam = 1;
       } else state.currentTeam = 0;
     },
-    isWiner: (state) => {
-      if (
-        state.teams[0].step === state.teams[1].step &&
-        state.teams[0].score >= state.points &&
-        state.teams[0].score > state.teams[1].score
-      ) {
-        state.win1 = true;
-      }
-      if (
-        state.teams[0].step === state.teams[1].step &&
-        state.teams[1].score >= state.points &&
-        state.teams[1].score > state.teams[0].score
-      ) {
-        state.win2 = true;
-      }
-    },
+
     setCurrentAnswers: (state, action) => {
       state.currentAnswers = action.payload;
+    },
+    playAgain: (state) => {
+      state = { ...initialState };
+    },
+    setWinner1: (state, action) => {
+      state.win1 = action.payload;
+    },
+    setWinner2: (state, action) => {
+      state.win2 = action.payload;
     },
   },
 });
@@ -67,8 +61,10 @@ export const {
   setPoints,
   setSeconds,
   setTurnResults,
-  isWiner,
   setCurrentAnswers,
+  playAgain,
+  setWinner1,
+  setWinner2,
 } = infoSlice.actions;
 
 export default infoSlice.reducer;
