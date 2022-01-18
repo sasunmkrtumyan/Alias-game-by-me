@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./teams.scss";
 import { Link } from "react-router-dom";
@@ -37,8 +36,8 @@ export default function Teams() {
             type="text"
             id="team1"
             name="team2"
-            minlength="1"
-            maxlength="15"
+            minLength="1"
+            maxLength="15"
           ></input>
           <input
             value={team2}
@@ -47,8 +46,8 @@ export default function Teams() {
             type="text"
             id="team1"
             name="team2"
-            minlength="1"
-            maxlength="15"
+            minLength="1"
+            maxLength="15"
           ></input>
         </div>
         {(!team1 || !team2) && (
@@ -61,9 +60,9 @@ export default function Teams() {
         <p>Point to win - {point}</p>
       </div>
       <Link to="/">
-        <button className="but">For change rules</button>
+        <button className="btn but">For change rules</button>
       </Link>
-      <button className="btn" onClick={checkNameValidation}>
+      <button className="btn " onClick={checkNameValidation}>
         START
       </button>
     </div>

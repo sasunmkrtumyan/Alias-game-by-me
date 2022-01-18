@@ -10,6 +10,7 @@ const initialState = {
   currentTeam: 0,
   win1: false,
   win2: false,
+  currentAnswers: [],
 };
 
 export const infoSlice = createSlice({
@@ -54,6 +55,9 @@ export const infoSlice = createSlice({
         state.win2 = true;
       }
     },
+    setCurrentAnswers: (state, action) => {
+      state.currentAnswers = action.payload;
+    },
   },
 });
 
@@ -64,6 +68,7 @@ export const {
   setSeconds,
   setTurnResults,
   isWiner,
+  setCurrentAnswers,
 } = infoSlice.actions;
 
 export default infoSlice.reducer;

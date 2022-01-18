@@ -28,7 +28,7 @@ export const words = [
   "կարիճ",
   "պահմտոցի",
   "անդառնալի",
-  "աղնիվ",
+  "ազնիվ",
   "սրամիտ",
   "Ակսել Բակունց",
   "Վիկտոր Հյուգո",
@@ -54,11 +54,5 @@ export const words = [
 ];
 
 export function wordGenerator() {
-  const wordsArr = [];
-
-  for (let i = 0; i < 7; i++) {
-    const index = Math.floor(Math.random() * 52);
-    wordsArr.push(words[index]);
-  }
-  return wordsArr;
+  return words.sort(() => 0.5 - Math.random());
 }

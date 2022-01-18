@@ -1,0 +1,46 @@
+.resultContent {
+  position: relative;
+}
+
+.resultDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  width: 65%;
+  margin: 0 auto 20px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  background-color: white;
+  height: 600px;
+  p {
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(74, 253, 113);
+  }
+}
+
+.resbtn {
+  cursor: pointer;
+  display: block;
+  width: max-content;
+  margin: 10px auto;
+  border-radius: 20px;
+  background-color: rgb(253, 93, 0);
+  font-size: 40px;
+  padding: 10px 120px;
+}
+.points {
+  margin: 10px auto;
+  width: max-content;
+  font-size: 70px;
+  font-weight: 400;
+  color: rgb(253, 93, 0);
+  font-family: "Fredoka One", cursive;
+}
+.oops {
+  font-size: 80px;
+  margin: 30px auto;
+  color: red;
+}

@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "./start.scss";
 import { wordGenerator } from "../../words";
-import { setTurnResults } from "../../features/info/infoSlice";
+import {
+  setTurnResults,
+  setCurrentAnswers,
+} from "../../features/info/infoSlice";
 
 export default function Start() {
   const dispatch = useDispatch();
@@ -13,36 +16,38 @@ export default function Start() {
   );
   const seconds = useSelector((state) => state.info.seconds);
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
+  const [page, setPage] = useState(0);
   const [currentPoints, setCurrentPoints] = useState(0);
   const [answeredWords, setAnsweredWords] = useState([]);
-  const [counter, setCounter] = useState(seconds);
+  const [counter, setCounter] = useState(seconds - 50);
   const [words, setWords] = useState([]);
-  const [answer, setAnswer] = useState("word");
-
-  if (counter < 1) {
-    dispatch(setTurnResults(currentPoints));
-    // navigate("/result");
-  }
 
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+
+    if (counter < 1) {
+      dispatch(setTurnResults(currentPoints));
+      dispatch(setCurrentAnswers(answeredWords));
+      navigate("/result");
+    }
   }, [counter]);
 
-  useEffect((currentPoints) => {
-    setWords(wordGenerator(currentPoints));
+  useEffect(() => {
+    setWords(wordGenerator());
   }, []);
 
   function handleAnsuered(word) {
     if (!answeredWords.includes(word)) {
       setAnsweredWords([...answeredWords, word]);
       setCurrentPoints(currentPoints + 1);
-      setAnswer("answered");
+      if ((answeredWords.length + 1) % 7 === 0) {
+        setPage(page + 1);
+      }
     } else {
       setAnsweredWords(answeredWords.filter((item) => item !== word));
       setCurrentPoints(currentPoints - 1);
-      setAnswer("word");
     }
   }
 
@@ -53,10 +58,12 @@ export default function Start() {
         <p>{counter}</p>
       </div>
       <div className="wordsDiv">
-        {words?.map((word, index) => {
+        {words?.slice(page * 7, (page + 1) * 7).map((word, index) => {
           return (
             <p
-              className={`"word" ${answer}`}
+              className={`word ${
+                answeredWords.includes(word) ? "answered" : ""
+              }`}
               key={index}
               onClick={() => handleAnsuered(word)}
             >

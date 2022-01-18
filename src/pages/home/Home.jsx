@@ -1,4 +1,3 @@
-import React from "react";
 import "./home.scss";
 import { useNavigate } from "react-router-dom";
 import { setPoints, setSeconds } from "../../features/info/infoSlice";
@@ -25,6 +24,7 @@ export default function Home() {
         <div className="config">
           <p>Round time</p>
           <input
+            className="input"
             value={seconds}
             onChange={(e) => dispatch(setSeconds(e.target.value))}
             className="config-input"
@@ -36,6 +36,7 @@ export default function Home() {
         <div className="config">
           <p>Point to win</p>
           <input
+            className="input"
             value={points}
             onChange={(e) => dispatch(setPoints(e.target.value))}
             className="config-input"

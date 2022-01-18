@@ -9,12 +9,7 @@
   padding: 10px 120px;
 }
 .but {
-  cursor: pointer;
-  display: block;
-  width: max-content;
   margin: 10px auto;
-  border-radius: 20px;
-  background-color: rgb(253, 93, 0);
   font-size: 20px;
   padding: 5px 50px;
 }
@@ -30,4 +25,11 @@
     rgba(206, 152, 247, 1) 0%,
     rgba(255, 138, 203, 1) 100%
   );
+}
+input {
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
 }
