@@ -44,7 +44,10 @@ export const infoSlice = createSlice({
       state.currentAnswers = action.payload;
     },
     playAgain: (state) => {
-      state = { ...initialState };
+      state.teams[0].score = 0;
+      state.teams[1].score = 0;
+      state.teams[0].step = 0;
+      state.teams[1].step = 0;
     },
     setWinner1: (state, action) => {
       state.win1 = action.payload;

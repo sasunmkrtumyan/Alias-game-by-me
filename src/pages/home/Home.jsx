@@ -41,7 +41,8 @@ export default function Home() {
             onChange={(e) => dispatch(setPoints(e.target.value))}
             className="config-input"
             type="number"
-            min="50"
+            min="30"
+            max="500"
           />
         </div>
         {(points < 30 || seconds < 30) && (
