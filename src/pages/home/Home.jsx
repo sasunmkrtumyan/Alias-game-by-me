@@ -46,7 +46,7 @@ export default function Home() {
           />
         </div>
         {(points < 30 || seconds < 30) && (
-          <p className="error">Stop bebe ! ! !</p>
+          <p className="error">must choose over 30</p>
         )}
       </div>
       <button onClick={handleValidate} className="btn">

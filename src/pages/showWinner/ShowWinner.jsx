@@ -38,9 +38,9 @@ export default function ShowWinner() {
           <h3>{team2}</h3>
         </div>
         {win1 ? (
-          <h1 className="winnerContent">{team1} win the Game</h1>
+          <h1 className="winnerContent">{team1} wins the Game</h1>
         ) : (
-          <h1 className="winnerContent">{team2} win the Game</h1>
+          <h1 className="winnerContent">{team2} wins the Game</h1>
         )}
 
         <button className="resbtn" onClick={handlePlayAgain}>
