@@ -593,7 +593,6 @@ export const words = [
   "գինովնալ",
   "մաքսապետ",
   "կարևոր",
-  "ֆիզիկոս",
   "ֆարենհայտ",
   "բույր",
   "բույս",
@@ -601,5 +600,5 @@ export const words = [
 ];
 
 export function wordGenerator() {
-  return words.sort(() => 0.5 - Math.random());
+  return [...new Set(words)].sort(() => 0.5 - Math.random());
 }
